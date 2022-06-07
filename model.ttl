@@ -1,0 +1,180 @@
+@prefix map: <http://semmeddbeh/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://semmeddbeh/PREDICATION#OBJECT_CUI
+<http://semmeddbeh/PREDICATION#OBJECT_CUI> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#OBJECT_NAME
+<http://semmeddbeh/PREDICATION#OBJECT_NAME> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE
+<http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#PMID
+<http://semmeddbeh/PREDICATION#PMID> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#PREDICATE
+<http://semmeddbeh/PREDICATION#PREDICATE> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#SUBJECT_CUI
+<http://semmeddbeh/PREDICATION#SUBJECT_CUI> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#SUBJECT_NAME
+<http://semmeddbeh/PREDICATION#SUBJECT_NAME> rdf:type owl:AnnotationProperty .
+
+
+###  http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE
+<http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#ContentUniqueID
+<http://www.co-ode.org/ontologies/ont.owl#ContentUniqueID> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#Name
+<http://www.co-ode.org/ontologies/ont.owl#Name> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#SemType
+<http://www.co-ode.org/ontologies/ont.owl#SemType> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.co-ode.org/ontologies/ont.owl#causedBy
+<http://www.co-ode.org/ontologies/ont.owl#causedBy> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#causes> .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#causes
+<http://www.co-ode.org/ontologies/ont.owl#causes> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#SemMedEntity> ;
+                                                  rdfs:range <http://www.co-ode.org/ontologies/ont.owl#SemMedEntity> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://semmeddbeh/PREDICATION
+<http://semmeddbeh/PREDICATION> rdf:type owl:Class .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#SemMedEntity
+<http://www.co-ode.org/ontologies/ont.owl#SemMedEntity> rdf:type owl:Class ;
+                                                        <http://www.co-ode.org/ontologies/ont.owl#ContentUniqueID> "" ;
+                                                        <http://www.co-ode.org/ontologies/ont.owl#Name> "" ;
+                                                        <http://www.co-ode.org/ontologies/ont.owl#SemType> "" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://semmeddbeh/PREDICATION/10648711
+<http://semmeddbeh/PREDICATION/10648711> rdf:type owl:NamedIndividual ,
+                                                  <http://semmeddbeh/PREDICATION> ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_CUI> "C0019054" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_NAME> "hemolysis" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE> "celf" ;
+                                         <http://semmeddbeh/PREDICATION#PMID> "16530733" ;
+                                         <http://semmeddbeh/PREDICATION#PREDICATE> "CAUSES" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_CUI> "C0028115" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_NAME> "Nisin" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE> "aapp" ;
+                                         rdfs:label "10648711" .
+
+
+###  http://semmeddbeh/PREDICATION/10652450
+<http://semmeddbeh/PREDICATION/10652450> rdf:type owl:NamedIndividual ,
+                                                  <http://semmeddbeh/PREDICATION> ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_CUI> "C0162638" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_NAME> "Apoptosis" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE> "celf" ;
+                                         <http://semmeddbeh/PREDICATION#PMID> "16530744" ;
+                                         <http://semmeddbeh/PREDICATION#PREDICATE> "CAUSES" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_CUI> "C0037533" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_NAME> "Sodium Nitroprusside" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE> "orch" ;
+                                         rdfs:label "10652450" .
+
+
+###  http://semmeddbeh/PREDICATION/10652702
+<http://semmeddbeh/PREDICATION/10652702> rdf:type owl:NamedIndividual ,
+                                                  <http://semmeddbeh/PREDICATION> ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_CUI> "C0162638" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_NAME> "Apoptosis" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE> "celf" ;
+                                         <http://semmeddbeh/PREDICATION#PMID> "16530744" ;
+                                         <http://semmeddbeh/PREDICATION#PREDICATE> "CAUSES" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_CUI> "C0037533" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_NAME> "Sodium Nitroprusside" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE> "orch" ;
+                                         rdfs:label "10652702" .
+
+
+###  http://semmeddbeh/PREDICATION/10652869
+<http://semmeddbeh/PREDICATION/10652869> rdf:type owl:NamedIndividual ,
+                                                  <http://semmeddbeh/PREDICATION> ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_CUI> "C0007587" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_NAME> "Cell Death" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE> "celf" ;
+                                         <http://semmeddbeh/PREDICATION#PMID> "16530744" ;
+                                         <http://semmeddbeh/PREDICATION#PREDICATE> "CAUSES" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_CUI> "C0037533" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_NAME> "Sodium Nitroprusside" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE> "orch" ;
+                                         rdfs:label "10652869" .
+
+
+###  http://semmeddbeh/PREDICATION/10653124
+<http://semmeddbeh/PREDICATION/10653124> rdf:type owl:NamedIndividual ,
+                                                  <http://semmeddbeh/PREDICATION> ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_CUI> "C0162638" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_NAME> "Apoptosis" ;
+                                         <http://semmeddbeh/PREDICATION#OBJECT_SEMTYPE> "celf" ;
+                                         <http://semmeddbeh/PREDICATION#PMID> "16530744" ;
+                                         <http://semmeddbeh/PREDICATION#PREDICATE> "CAUSES" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_CUI> "C0037533" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_NAME> "Sodium Nitroprusside" ;
+                                         <http://semmeddbeh/PREDICATION#SUBJECT_SEMTYPE> "orch" ;
+                                         rdfs:label "10653124" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#C0019054
+<http://www.co-ode.org/ontologies/ont.owl#C0019054> rdf:type owl:NamedIndividual ,
+                                                             <http://www.co-ode.org/ontologies/ont.owl#SemMedEntity> ;
+                                                    <http://www.co-ode.org/ontologies/ont.owl#SemType> "celf" ;
+                                                    rdfs:label "hemolysis" .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#C0028115
+<http://www.co-ode.org/ontologies/ont.owl#C0028115> rdf:type owl:NamedIndividual ,
+                                                             <http://www.co-ode.org/ontologies/ont.owl#SemMedEntity> ;
+                                                    <http://www.co-ode.org/ontologies/ont.owl#causes> <http://www.co-ode.org/ontologies/ont.owl#C0019054> ;
+                                                    <http://www.co-ode.org/ontologies/ont.owl#SemType> "aapp" ;
+                                                    rdfs:label "Nisin" ,
+                                                               "test" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
